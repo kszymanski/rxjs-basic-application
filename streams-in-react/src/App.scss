@@ -1,0 +1,11 @@
+
+.userlist{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .item{
+    padding: 15px;
+  }
+}

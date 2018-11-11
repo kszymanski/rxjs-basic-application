@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <h2>Very (not)advanced github user search ;)</h2>
+  <mat-form-field class="search">
+    <input matInput placeholder="do not hesitate! just search..." [formControl]="search">
+  </mat-form-field>
+  <div class="results">
+    <mat-card *ngFor="let user of users$ | async">
+      <img mat-card-image [src]="user.avatar_url">
+      <mat-card-title>{{user.login}}</mat-card-title>
+      <mat-card-subtitle><a [href]="user.html_url">{{user.html_url}}</a></mat-card-subtitle>
+      <mat-divider></mat-divider>
+      <mat-card-footer><mat-icon>star</mat-icon>{{user.score}}</mat-card-footer>
+    </mat-card>
+  </div>
+</div>
